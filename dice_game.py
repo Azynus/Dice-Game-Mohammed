@@ -79,3 +79,16 @@ def play_turn():
 
 # Play a single turn
 play_turn()
+
+def play_game():
+    total_score = 0
+    rounds = int(input("How many rounds do you want to play? "))  # Ask the user how many rounds to play
+
+    for round_number in range(1, rounds + 1):
+        print(f"\nRound {round_number}:")
+        total_score += play_turn()
+
+    print(f"\nGame Over! Your total score across {rounds} rounds is: {total_score}")
+
+# Start the game
+play_game()
